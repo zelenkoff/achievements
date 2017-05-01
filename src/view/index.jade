@@ -1,0 +1,16 @@
+include ../blocks/wrapper/wrapper
+
+extends layout/layout
+
+block title
+    title Achievements
+block content
+    ul.achievement-list
+       - var images = ['./images/microphone.png', './images/monkey.png', './images/angry.png', './images/smile.png']
+       - var colors = ['wrapper__blue', 'wrapper__green', 'wrapper__red','wrapper__purple']
+       - for (var i = 0; i < 100; i++) {
+            - var randImage = Math.floor(Math.random() * images.length)
+            - var colorsImage = Math.floor(Math.random() * colors.length)
+            li.achievement-list__element
+                +wrapper(images[randImage], colors[colorsImage])
+       - }

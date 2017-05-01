@@ -1,0 +1,22 @@
+ .achievement__counter
+    position absolute
+    width 36px
+    height 36px
+    background #333
+    border 5px solid #888
+    border-radius 50%
+    right -1px
+    bottom -1px
+    display flex
+    justify-content center
+    align-items center
+    color #fff
+
+ .achievement__counter
+    &:before
+        counter-increment achievement
+        content counter(achievement)
+        z-index 1
+        font-family Arial, Helvetica, sans-serif
+        font-size 16px
+        font-weight bold

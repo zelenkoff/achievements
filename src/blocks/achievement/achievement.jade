@@ -1,0 +1,10 @@
+mixin achievement(img, alt)
+    if img && alt
+        .achievement-list__item
+            img.achievement-list__image(src=img, alt=alt)
+    else if img && !alt
+        .achievement-list__item
+            img.achievement-list__image(src=img, alt="another achievement")
+    else
+        .achievement-list__item
+            img.achievement-list__image(src="./images/default.png", alt="another achievement")

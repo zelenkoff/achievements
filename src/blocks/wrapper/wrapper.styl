@@ -1,0 +1,41 @@
+@import "../../stylus/variables/variables.styl"
+
+.wrapper
+    width 100px
+    height 100px
+    background-color #888
+    border-radius 50%
+    display flex
+    position relative
+    &__green
+        background green-border
+        .achievement-list__item
+            background green-entity
+        .achievement__counter
+            background green-entity
+            border-color green-border
+            color green-counter
+    &__red
+        background red-border
+        .achievement-list__item
+            background red-entity
+        .achievement__counter
+            background red-entity
+            border-color red-border
+            color red-counter
+    &__purple
+        background purple-border
+        .achievement-list__item
+            background purple-entity
+        .achievement__counter
+            background purple-entity
+            border-color purple-border
+            color purple-counter
+    &__blue
+        background blue-border
+        .achievement-list__item
+            background blue-entity
+        .achievement__counter
+            background blue-entity
+            border-color blue-border
+            color blue-counter

@@ -1,0 +1,10 @@
+include ../achievement/achievement
+include ../counter/counter
+
+mixin wrapper(img, color, alt)
+    - var img = img || undefined
+    - var color = color || undefined
+    - var alt = alt || undefined
+    .wrapper(class=color)
+        +achievement(img, alt)
+        +counter
