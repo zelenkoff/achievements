@@ -1,0 +1,114 @@
+.wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: #888;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.wrapper__green {
+  background: #73f956;
+}
+.wrapper__green .achievement-list__item {
+  background: #8fd28f;
+}
+.wrapper__green .achievement-counter {
+  background: #8fd28f;
+  border-color: #73f956;
+  color: #2aad2a;
+}
+.wrapper__red {
+  background: #fb4444;
+}
+.wrapper__red .achievement-list__item {
+  background: #ff6d6d;
+}
+.wrapper__red .achievement-counter {
+  background: #ff6d6d;
+  border-color: #fb4444;
+  color: #c32f2f;
+}
+.wrapper__purple {
+  background: #8033a7;
+}
+.wrapper__purple .achievement-list__item {
+  background: #9a56bc;
+}
+.wrapper__purple .achievement-counter {
+  background: #9a56bc;
+  border-color: #8033a7;
+  color: #641a88;
+}
+.wrapper__blue {
+  background: #455fbd;
+}
+.wrapper__blue .achievement-list__item {
+  background: #4e6cda;
+}
+.wrapper__blue .achievement-counter {
+  background: #4e6cda;
+  border-color: #455fbd;
+  color: #0d2373;
+}
+.achievement-list__item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background: #333;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.achievement-list__image {
+  width: 42px;
+  height: 42px;
+}
+.achievement-counter {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: #333;
+  border: 5px solid #888;
+  border-radius: 50%;
+  right: -1px;
+  bottom: -1px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+.achievement-counter:before {
+  counter-increment: achievement;
+  content: counter(achievement);
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.achievement-list {
+  counter-reset: achievement;
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.achievement-list__element {
+  margin: 10px;
+}
