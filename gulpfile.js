@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const gutil = require('gulp-util');
 const imgmin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
+const deploy = require('gulp-gh-pages');
 
 gulp.task('jade', () => {
     gulp.src('./src/view/*.jade')
@@ -43,6 +44,11 @@ gulp.task('serve', () => {
         server: 'dist'
     });
     browserSync.watch('dist/**/*.*').on('change', browserSync.reload);
+});
+
+gulp.task('deploy', () => {
+    return gulp.src('./dist/**/*')
+        .pipe(deploy())
 });
 
 gulp.task('default', ['jade', 'stylus','serve', 'watch']);
